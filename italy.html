@@ -6,7 +6,7 @@
     <title>GlobalAdventure</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
     <link rel="stylesheet" href="styleitaly.css">
-    <link rel="icon" href="/your_path_to_image/favicon.jpg">
+    <link rel="icon" class="icon" type="x-icon" href="images_italy/Plain-Location-97.png">
 </head>
 
 <body>
@@ -15,14 +15,18 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="location1.html">Location</a></li>
-                <li><a href="italy.html">Italy</a></li>
+                <li><a href="italy.html"><img src="images_italy/icon_of_italy.jpg" width=40px><br>Italy</a></li>
             </ul>
         </nav>
     </header>
 
 
-    <div>
+    <div class="flex_container">
+        <div class="left_side">
+            <p>left</p>
+        </div>
         <div class="content">
+
             <div class="slider-wrapper">
                 <div class="slider">
                     <img id="slide1" src="images_italy/flag.jpg" alt="flag of italy">
@@ -60,7 +64,8 @@
             </ul>
             <div class="place">
                 <h2 id="rome">Rome</h2>
-                <img class="pictures" src="images_italy/rome.jpg">
+                <div style="float: right;margin: 3px;"><video controls autoplay muted loop
+                        src="videos/Minute_of_ROME.mp4" width=500px></video></div>
                 <p>
                     Rome, the city of seven hills, enjoyed a mythic beginning.
                     Romulus and Remus – twin brothers who were nursed by a she-wolf and fathered by a war god –
@@ -83,6 +88,7 @@
                     modern and relevant city, with gleaming designer storefronts, sleek hotels and cutting-edge
                     restaurants.
                 </p>
+                <h2 id="rome">Attractions in Rome</h2>
                 <div class="locations">
                     <div class="location">
                         <img src="images_italy/colosseum.jpg" class="image">
@@ -117,46 +123,109 @@
                         <img src="images_italy/burga.jpg" class="image">
                         <div class="info">
                             <h3>Borghese Gallery</h3>
-                            <p class="info_style">amazingly beautiful art gallery located within the wonderful Borghese Gardens.
+                            <p class="info_style">amazingly beautiful art gallery located within the wonderful Borghese
+                                Gardens.
                                 Must see without a doubt.
                                 Book tickets in advance to reserve a convenient date.
-                            </p> 
+                            </p>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="locations">
-                    <div class="location">
-                        <img src="images_italy/colosseum.jpg" class="image">
-                        <div class="info">
-                            <p class="info_style">hello</p>
-                        </div>
-                    </div>
-                    <div class="location">
-                        <img src="images_italy/vatican_museum.jpg" class="image">
-                        <div class="info">
-                            <p class="info_style">hello</p>
-                        </div>
-                    </div>
-                    <div class="location">
-                        <img src="images_italy/pantheon.jpg" class="image">
-                        <div class="info">
-                            <p class="info_style">hello</p>
-                        </div>
-                    </div>
-                    <div class="location">
-                        <img src="images_italy/pantheon.jpg" class="image">
-                        <div class="info">
-                            <p class="info_style">hello</p>
-                        </div>
-                    </div>
-                </div> -->
             </div>
-            <h2 id="florence">Florence</h2>
-            <h2 id="veince">Venice</h2>
+
+            <div class="place">
+                <h2 id="florence">Florence</h2>
+                <div style="float: right;margin: 3px;"><video controls autoplay muted loop src="videos/FLORENCE.mp4"
+                        width=500px></video></div>
+                <p>
+                    The city of Florence lies on the banks of the Arno River and is surrounded by the charming
+                    landscapes of the beautiful Tuscany region,
+                    which is its capital. It is one of the most beautiful cities in Italy and Europe as a whole and
+                    throughout history
+                    the biggest names in the world of culture have lived there - Michelangelo, Dante and Machiavelli.
+                    Florence is the cradle of the Renaissance, with a rich cultural and artistic past and present,
+                    which are milestones in world history, therefore, it is a must-stop in Italy for every tourist,
+                    and especially for culture and art lovers. The Uffizi Gallery is Florence's most
+                    famous museum and displays important works from the Renaissance, including Botticelli's famous work,
+                    "The Birth of Venus". Michelangelo's famous statue, David, stands in the Accademia Gallery in
+                    Florence and apart from these,
+                    there are other museums scattered around the city, which curate works of art,
+                    whose value is priceless.
+                </p>
+                <br>
+                <p>
+
+                </p>
+                <h2 id="rome">Attractions in Florence</h2>
+                <div class="locations">
+                    <div class="location">
+                        <img src="images_italy/Piazzale_Michelangelo.jpg" class="image">
+                        <div class="info">
+                            <h3>Piazzale Michelangelo</h3>
+                            <p class="info_style">
+                                Piazzale Michelangelo is a square in Florence, on a hill on the south bank of the Arno
+                                river,
+                                from which you can see the view of the historic center of Florence and all its main
+                                attractions.
+                                In the center of the square, on a raised platform, there is a replica of Michelangelo's
+                                statue, David.</p>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <img src="images_italy/Piazza.jpg" class="image">
+                        <div class="info">
+                            <h3>The Piazza della Signoria</h3>
+                            <p class="info_style">
+                                The Piazza della Signoria (Signoria Square) is Florence’s main square.
+                                It is located between the Piazza del Duomo and the Arno River</p>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <img src="images_italy/Riaito.jpg" class="image">
+                        <div class="info">
+                            <h3>Ponte di Rialto</h3>
+                            <p class="info_style">
+                                The beautiful bridge was designed by an artist named Antonio and he prevailed in the
+                                center of design
+                                over big names like Palladio and even Michelangelo, in his own right.
+                                On the bridge today there are many souvenir and jewelry shops and near the bridge there
+                                is a Rialto market.</p>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <img src="images_italy/Palazzo_Pitti.jpg" class="image">
+                        <div class="info">
+                            <h3>Palazzo Pitti</h3>
+                            <p class="info_style">
+                                Palazzo Pitti is mainly known for having been the residence of the Medici family.
+                                Today, it houses important Florentine museums, not to mention its marvelous Boboli
+                                Gardens.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="place">
+                <h2 id="veince">Venice</h2>
+            </div>
+
+        </div>
+        <div class="right_side">
+            <iframe class="add" width="300" height="205" src="https://www.youtube.com/embed/kpHBxLqkikw?si=iOIXzMrrYpT4rIzY"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share;"
+                allowfullscreen></iframe>
         </div>
     </div>
+
+
     <footer>
-        <span>&copy;GlobalAdventure</span>
+        <p>© 2024 Global Adventure. All rights reserved.</p>
+        <div class="social-links">
+            <a href="http://facebook.com">Facebook</a>
+            <a href="http://twitter.com">Twitter</a>
+            <a href="http://instagram.com">Instagram</a>
+        </div>
     </footer>
 </body>
 
