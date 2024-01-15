@@ -1,6 +1,6 @@
 
 html {
-    direction: rtl;
+    direction: ltr;
 }
 
 nav ul {
@@ -14,12 +14,12 @@ nav ul {
 } */
 
 nav li {
-    float: right;
+    float: left;
 }
 
 
 nav li {
-    float: right;}
+    float: left;}
 
 
 body {
@@ -56,6 +56,8 @@ nav a:hover, nav a.active {
 
 h2 {
     font-style: italic;
-    color: blue;
+}
+.grid-item{
+    display: block;
 }
 
