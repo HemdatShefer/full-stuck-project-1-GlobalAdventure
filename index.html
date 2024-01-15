@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>GlobalAdventure</title>
@@ -7,11 +8,13 @@
     <link rel="stylesheet" type="text/css" href="hero-banner.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
+
 <body>
     <header>
         <div class="header-inner">
-            <h1 class="logo">
-                <img src="logo.png" alt="Logo" class="logo-image">Global Adventure</h1>
+            <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 50px;">
+                <img src="images/logo .png" alt="Logo" style="border-radius: 100%; width:80px;margin-right: 5px;">Global Adventure
+            </h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Home </a></li>
@@ -29,27 +32,37 @@
             </nav>
         </div>
     </header>
-    
- 
-    <section id="hero-banner" class="scroll-animation">
+
+
+    <div class="flex_container">
+        
         <div class="hero-image">
+            <video autoplay muted loop plays-inline class="back_video">
+                <source src="videos/home_page.mp4">
+            </video>
+            <div class="banner-text">
+                <h1>Get ready for Your Next Adventure</h1>
+            </div>
+          
         </div>
-        <div class="banner-text">
-            <h1>Get ready for Your Next Adventure</h1>
+        <div class="welcome-message">
+            <div class="content-wrapper">
+                <br>
+                <aside style="width:50%; margin-left: 20%; color: #f9f9f9;"><p></p>
+                <h2 style="font-size: 40px;">Welcome to Global Adventure</h2>
+                <p style="font-size: 20px;">
+                    Our mission is to unlock the wonders of the world for every traveler.
+                    As a platform dedicated to inspiring and guiding explorers on their journeys,
+                    we offer a gateway to unforgettable experiences. Our commitment goes beyond showcasing
+                    breathtaking destinations;
+                    we strive to foster a deeper understanding and appreciation of diverse cultures and
+                    environments.
+                    Join us on this journey of discovery, where every trip is an opportunity to learn,
+                    grow, and create lasting memories while respecting and preserving the beauty and diversity of
+                    our planet.</p>
+            </div></aside>
         </div>
-    </section>
-    <section id="welcome-message">
-        <div class="content-wrapper">
-            <h2>Welcome to Global Adventure</h2>
-            <p>Welcome," 
-            where our mission is to unlock the wonders of the world for every traveler.
-            As a platform dedicated to inspiring and guiding explorers on their journeys,
-            we offer a gateway to unforgettable experiences. Our commitment goes beyond showcasing breathtaking destinations;
-            we strive to foster a deeper understanding and appreciation of diverse cultures and environments.
-            Join us on this journey of discovery, where every trip is an opportunity to learn,
-            grow, and create lasting memories while respecting and preserving the beauty and diversity of our planet.</p>
-        </div>
-    </section>
+    </div>
     <footer>
         <p>© 2024 Global Adventure. All rights reserved.</p>
         <div class="social-links">
@@ -58,7 +71,7 @@
             <a href="http://instagram.com">Instagram</a>
         </div>
     </footer>
-    <!-- תוכן הדף יהיה כאן -->
 
 </body>
+
 </html>
