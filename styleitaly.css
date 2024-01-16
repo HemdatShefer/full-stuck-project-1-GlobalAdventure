@@ -11,33 +11,7 @@
     background-size: 100% 100%;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #272424; /* צבע רקע לתפריט */
-}
-/* הגדרת סגנון לפריטים בתפריט */
-nav li {
-    float: left;
-    font-family: 'Karla',sans-serif;
-}
-/* הגדרת סגנון לקישורים */
-nav a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 7px;
-    text-decoration: none;
-}
-/* .background{
-    height: 600px;
-    width: 1000px;
-    display: inline-block;
-    position: relative; 
-    float: left;
-} */
+
 .photo{
     filter: brightness(70%);
     width: 100%;
@@ -92,8 +66,10 @@ body,html{
     margin-left: 10px;
     display: inline-block; 
 }
-place{
+.place{
     border-left: 1px solid #938c8c;
+    position: relative;
+    min-height: 300px;
 }
 h1{
     margin-top: 30px;
@@ -211,23 +187,6 @@ div::-webkit-scrollbar{
     opacity: 1;
 }
 
-/* Footer */
-footer {
-    background-color:  #272424;
-    color: #fff;
-    text-align: center;
-    padding: 30px 0;
-}
-
-.footer-links a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    color: #ff5733;
-}
 .add{
     position:static;
 }
