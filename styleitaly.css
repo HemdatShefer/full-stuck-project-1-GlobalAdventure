@@ -211,8 +211,10 @@ div::-webkit-scrollbar{
     opacity: 1;
 }
 
-.add{
+iframe{
     position:static;
+    width:300px;
+    height:205px; 
 }
 
 
