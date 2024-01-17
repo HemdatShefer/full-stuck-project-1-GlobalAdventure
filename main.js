@@ -12,7 +12,7 @@ class MyHeader extends HTMLElement{
                 '  <li><a href="index.html">Home </a></li>'+
                   '<li><a href="about.html">About Us</a></li>'+
                   '<li><a href="contact.html">Contact</a></li>'+
-                  '<li> <a href="destinations.html">Destinations</a>'+
+                  '<li> <a>Destinations</a>'+
                       '<ul id="submenu">'+
                           '<li><a href="italy.html">italy</a></li>'+
                           '<li><a href="greece.html">Greece</a></li>'+
