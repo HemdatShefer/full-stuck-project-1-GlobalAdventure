@@ -11,18 +11,16 @@ html {
     padding:0;
 }
 .dropdownmenu ul{
-    /* background-color: #35424a ;
-    list-style: none;
-    width: 100%; */
     list-style: none;
     background-color: #272424; /* Matching colleague's nav bar color */
     width: 100%;
-
 }
+
 .dropdownmenu li{
     float: left;
     position: relative;
     width: auto;
+    display: inline-block;
 }
 .dropdownmenu a{
     background-color: #272424;
@@ -41,7 +39,7 @@ html {
     background: #f4f4f4;
     color: #272424;  
 }
-#submenu{
+.submenu{
     left: 0;
     opacity: 0;
     position: absolute;
@@ -102,4 +100,31 @@ h2 {
     .social-links a {
         display: block; /* Stack social links vertically */
     }
+}
+.dropdownmenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdownmenu li {
+    position: relative; /* חשוב לתפריטים הנפתחים */
+}
+
+.submenu {
+    display: none; /* מוסתר כברירת מחדל */
+    position: absolute;
+    background-color: #fff; /* או צבע אחר לפי בחירתך */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    min-width: 150px; /* או רוחב אחר לפי בחירתך */
+    z-index: 1000; /* כדי שיהיה מעל שאר האלמנטים */
+}
+
+/* מוצג כאשר מעבירים את העכבר מעל הפריט */
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    padding: 8px; /* להתאים לפי צרכיך */
 }
