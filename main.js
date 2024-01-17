@@ -17,7 +17,7 @@ class MyHeader extends HTMLElement {
                                 <ul id="submenu">
                                     <li><a href="italy.html">Italy</a></li>
                                     <li><a href="greece.html">Greece</a></li>
-                                    <li><a href="USA.html">USA</a></li>
+                                    <li><a href="israel.html">israel</a></li>
                                 </ul>
                             </li>
                         </ul>
