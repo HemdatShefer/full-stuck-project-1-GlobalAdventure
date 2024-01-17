@@ -1,214 +1,87 @@
 /* General Styles */
 body, html {
-    font-family: 'Roboto', sans-serif; /* Consistent with colleague's page */
+    font-family: 'Roboto', sans-serif;
     background-color: floralwhite; 
 }
-body {
-    font-family: Arial, sans-serif;
-    margin:  1px;
-    padding:  1px;
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* שני עמודות בגודל זהה */
+    gap: 20px; /* מרווח בין העמודות */
+    justify-content: center; /* Align items horizontally in the center */
+    align-items: center; /* Align items vertically in the center */
 }
 
-*{
-    padding: 1px;
-    margin:  1px;
-    box-sizing: border-box;
-}
-
-.content{
-    position: absolute;
-    text-align: center;
-    margin: 0 5px;
-    top: 70px;
-}
-.content h2{
-    font-size: 50px;
-    color:rgb(49, 37, 22);
-    margin-bottom: 7px;
-
-}
-.flex_container {
-    margin-left:  2px  ;
-    margin-right: 2px;
-    margin-top: 10px; /* מרחק מתפריט הניווט */
-    width: 60%; /* אחוז הרוחב יתאים לגדלים שונים של מסך */
-    max-width: 800px; /* מגביל את הרוחב המרבי */
-    height: 60%; /* גובה אוטומטי */
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: space-around;
-    position: relative;
+.text-content {
     padding: 20px;
-}
-
-.background_video{
-    position:relative ;
-    right:0;
-    left: 50px;
-    bottom: 0;
-    z-index: -1;
-    height: 150px;
-    width: 150px;
-    align-items: stretch;
-}
-.text-box {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
     border-radius: 10px;
+    font-size: 40px; /* גודל גופן גדול */
+    color: #000000; /* צבע גופן כהה לקריאות טובה יותר */
+    text-align: center; /* מרכוז הטקסט */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* צל קל ליצירת עומק */
+    margin: 0 auto; /* מרכוז האלמנט בציר האופקי */
+    max-width: 800px; /* הגבלת הרוחב המרבי */
+}
+
+.text-content h2 {
+    font-size: 48px; 
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 20px; /* גודל גופן עבור פיסקאות */
+    line-height: 1.6; /* גובה שורה לקריאות טובה יותר */
+}
+
+.image-slider {
+    position: relative;
+}
+
+.hero-image {
     width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+    margin:20px ;
+    height: 400px; /* גובה לדוגמה */
+    background-size: cover;
+    background-position: center;
+    animation: slideShow 24s infinite; /* השתמש באנימציה שהגדרת */
+}
+
+.slider-text h1 {
+    position: absolute;
+    bottom: 10px; /* מיקום הכיתוב מתחת לתמונות */
+    left: 0;
+    width: 100%;
     text-align: center;
+    color: white;
 }
 
-.text-box h2 {
-    font-size: 40px;
-    margin: 20px;
+@keyframes slideShow {
+    0% { background-image: url('images/view-1.png'); }
+    33% { background-image: url('images/view-2.png'); }
+    66% { background-image: url('images/view-3.png'); }
+    100% { background-image: url('images/view-1.png'); }
 }
-
-.text-box p {
-    font-size: 15px;
-}
-
 
 /* Media Queries */
 @media (max-width: 768px) {
-    .text-box h2 {
+    .text-content h2 {
         font-size: 20px;
     }
-    .text-box p {
+    .text-content p {
         font-size: 10px;
-    }
-    .flex-container {
-        padding-top: 50px;
-        width: 80%; /* מרחיב את הרוחב במסכים קטנים */
     }
 }
 
 @media (max-width: 480px) {
-    .flex-container {
-        padding-top: 50px;
-        width: 95%; /* מרחיב עוד יותר במסכים קטנים מאוד */
-
+    .grid-container {
+        gap: 10px;
     }
-    .content {
-        top: 50px;
-    }
-    .text-box {
-        padding: 10px;
-        max-width: 90%;
-    }
-    .text-box h2 {
+    .text-content h2 {
         font-size: 15px;
     }
-    .text-box p {
+    .text-content p {
         font-size: 10px;
     }
 }
 
-
- /*------------------start of code of the home page---------------*/
-/* #hero-banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('path_to_your_hero_image.jpg') no-repeat center center/cover;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    animation: slideShow 24s infinite;
-    z-index: 5; 
-}
-.header-inner {
-    position: relative;
-    z-index: 15; 
-}
-
-.banner-text {
-    position: relative;
-    z-index: 10; 
-    top: 50%;
-    transform: translateY(-50%);
-    font-family: 'Your Special Font', sans-serif;
-    font-size: 3rem;
-}
-
-
-#welcome-message .content-wrapper {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    text-align: center;
-}
-
-
-.flex_container{
-    display: block;
-    position: relative;
-    display: flex;
-}
-
-.welcome-message{
-    position: absolute;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    text-align: center;
-    z-index: 10;
-}
- .banner-text {
-    position: absolute;
-    /* display: inline; */
-    /* z-index: 10; 
-    top: 50%;
-    color: #f9f9f9;
-    font-family: 'Your Special Font', sans-serif;
-    font-size: 30px;
-    margin-left: 50%;
-} 
-
-}
-
-
-
- /*----------contact us page---------------*/
- button:hover {
-    background-color: #ff5733; /* Changes background color */
-    color: white; /* Changes text color */
-    border: 1px solid white; /* Optional: adds a border */
-}
-
- /* .dropdown {
-    position: relative;
-    display: inline-block;
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 20;
-}
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-.dropdown:hover .dropdown-content {
-    display: block;
-} */
-
+/* Additional styles as needed */
