@@ -1,13 +1,14 @@
 class MyHeader extends HTMLElement{
     connectedCallback(){
         this.innerHTML =
-      '    <header>'+
+      '<header>'+
       '<div class="header-inner">'+
-          '<h1 class="name">'+
-             ' <img src="images/logo .png" alt="Logo" style="border-radius: 100%; width:80px;margin-right: 5px;"> Global Adventure'+
-         ' </h1>'+
+         
           '<nav class="dropdownmenu">'+
             '<ul>'+
+            '<h1 class="name">'+
+            ' <img src="images/logo .png" alt="Logo" style="border-radius: 100%; width:80px;margin-right: 5px;"> Global Adventure'+
+            ' </h1>'+
                 '  <li><a href="index.html">Home </a></li>'+
                   '<li><a href="about.html">About Us</a></li>'+
                   '<li><a href="contact.html">Contact</a></li>'+
