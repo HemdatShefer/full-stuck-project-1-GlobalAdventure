@@ -3,6 +3,12 @@ body, html {
     font-family: 'Roboto', sans-serif; /* Consistent with colleague's page */
     /* background-color: floralwhite;  */
 }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -62,16 +68,19 @@ body, html {
     height: 500px;
     background-color: rgba(87, 65, 65, 0.4);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    position: relative;
+    padding: 20px;
 }
+
 .background_video{
     position: absolute;
     right:0;
     bottom: 0;
     z-index: -1;
-    height: 100%;
+    height: auto;
     width: 100%;
     background-size: cover;
 } */
@@ -162,11 +171,11 @@ body, html {
     height: 100%;
     margin-right: 5px;
     /* height: 100%; */
-    /* background-color: rgba(51, 40, 40, 0.75);
+    background-color: rgba(51, 40, 40, 0.75);
     filter: brightness(90%);
     background-position: center;
     z-index: 10; 
- } */ */ */
+ } */ */
  /*------------------end of code of the home page---------------*/
  
  /*--------------check-----------------*/
@@ -211,3 +220,4 @@ body, html {
 .dropdown:hover .dropdown-content {
     display: block;
 } */
+
