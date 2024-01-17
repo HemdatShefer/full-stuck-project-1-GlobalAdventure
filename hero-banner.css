@@ -5,13 +5,13 @@ body, html {
 }
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    margin:  1px;
+    padding:  1px;
 }
 
 *{
-    padding: 0;
-    margin: 0;
+    padding: 1px;
+    margin:  1px;
     box-sizing: border-box;
 }
 
@@ -28,58 +28,57 @@ body {
 
 }
 .flex_container {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 120px; /* מרחק מתפריט הניווט */
+    margin-left:  2px  ;
+    margin-right: 2px;
+    margin-top: 10px; /* מרחק מתפריט הניווט */
     width: 60%; /* אחוז הרוחב יתאים לגדלים שונים של מסך */
     max-width: 800px; /* מגביל את הרוחב המרבי */
-    height: auto; /* גובה אוטומטי */
-    background-color: rgba(87, 65, 65, 0.4);
+    height: 60%; /* גובה אוטומטי */
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
     position: relative;
     padding: 20px;
 }
 
 .background_video{
-    position: absolute;
+    position:relative ;
     right:0;
+    left: 50px;
     bottom: 0;
     z-index: -1;
-    height: auto;
-    width: 100%;
-    background-size: cover;
+    height: 150px;
+    width: 150px;
+    align-items: stretch;
 }
 .text-box {
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
     border-radius: 10px;
-    width: 100%; /* מאפשר לקופסה להתאים לגודל ה- flex_container */
-    max-width: 800px; /* Maximum width of the box */
-    margin: 0 auto; /* Centering the box */
-    text-align: center; /* ממרכז את הטקסט */
-
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .text-box h2 {
     font-size: 40px;
-    margin: 0;
+    margin: 20px;
 }
 
 .text-box p {
-    font-size: 20px;
+    font-size: 15px;
 }
 
 
 /* Media Queries */
 @media (max-width: 768px) {
     .text-box h2 {
-        font-size: 30px;
+        font-size: 20px;
     }
     .text-box p {
-        font-size: 18px;
+        font-size: 10px;
     }
     .flex-container {
         padding-top: 50px;
@@ -101,10 +100,10 @@ body {
         max-width: 90%;
     }
     .text-box h2 {
-        font-size: 24px;
+        font-size: 15px;
     }
     .text-box p {
-        font-size: 16px;
+        font-size: 10px;
     }
 }
 
