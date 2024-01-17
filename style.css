@@ -86,3 +86,20 @@ h2 {
     display: block;
 }
 
+@media screen and (max-width: 600px) {
+    .header-inner h1 {
+        font-size: smaller; /* Smaller font size for the header on small screens */
+    }
+
+    .dropdownmenu ul {
+        display: block; /* Stack menu items vertically on small screens */
+    }
+
+    .dropdownmenu ul li {
+        width: 100%; /* Full width menu items on small screens */
+    }
+
+    .social-links a {
+        display: block; /* Stack social links vertically */
+    }
+}
