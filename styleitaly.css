@@ -61,11 +61,7 @@ body,html{
     margin-left: 10px;
     /* display: inline; */
  */
-.video{ 
-    margin-right: 10px;
-    margin-left: 10px;
-    display: inline-block; 
-}
+
 .place{
     border-left: 1px solid #938c8c;
     position: relative;
@@ -98,11 +94,39 @@ p{
   display: flex;
   justify-content: space-around;
 }
+video{
+   width: 60%;
+   float: right;
+   margin: 3px;
+}
+
+@media (orientation:portrait) {
+    .left_side{
+        display: none;
+    }
+    .content{
+        width: 90%;
+        margin-left: 5%;
+        font-size: large;
+        border-right: none;
+    }
+    .locations{
+        flex-wrap: wrap;
+    }
+    .right_side{
+        display: none;
+    }
+    iframe{
+        display: none;
+    }
+    video{
+        width: 100%;
+    }
+}
 .location{
-    width: 28%; 
+    width: 300px;
     height: 320px;
     margin: 10px;
-    /* border: 1px solid #938c8c; */
     position: relative;
     margin: 15px;
     filter: brightness(85%);
@@ -190,4 +214,6 @@ div::-webkit-scrollbar{
 .add{
     position:static;
 }
+
+
 
