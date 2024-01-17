@@ -6,6 +6,21 @@
 body{
    min-height: 100vh;
 }
+.header-inner {
+    text-align: center;
+}
+
+.logo-and-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.name {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+}
 /*--------navbar--------------*/
 .dropdownmenu{
     display: flex;
@@ -36,11 +51,20 @@ body{
     text-align: center;
     text-decoration: none;
     transition: all 0.25s ease;
+    align-items: center; /* מיישר את הפריטים לאמצע */
+    justify-content: space-around; /* מפזר את הפריטים בצורה שווה */
+    align-items: start; 
 
 }
 .dropdownmenu li:hover a{
     background: #f4f4f4;
     color: #272424;  
+}
+@media screen and (max-width: 768px) {
+    .dropdownmenu a {
+        font-size: 11px; /* קטן יותר */
+        padding: 10px 15px; /* רווח קטן יותר */
+    }
 }
 #submenu{
     left: 0;
