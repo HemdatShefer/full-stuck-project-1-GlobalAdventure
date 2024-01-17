@@ -3,14 +3,25 @@ body, html {
     font-family: 'Roboto', sans-serif; /* Consistent with colleague's page */
     background-color: floralwhite; 
 }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
+
 .content{
+    position: absolute;
     text-align: center;
     margin: 0 5px;
+    top: 70px;
 }
 .content h2{
     font-size: 50px;
@@ -18,26 +29,88 @@ body, html {
     margin-bottom: 7px;
 
 }
-.flex_container{
-    margin-left: 15%;
-    margin-top: 50px;
-    width: 30%;
-    height: 500px;
+.flex_container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px; /* מרחק מתפריט הניווט */
+    width: 60%; /* אחוז הרוחב יתאים לגדלים שונים של מסך */
+    max-width: 800px; /* מגביל את הרוחב המרבי */
+    height: auto; /* גובה אוטומטי */
     background-color: rgba(87, 65, 65, 0.4);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    position: relative;
+    padding: 20px;
 }
+
 .background_video{
     position: absolute;
     right:0;
     bottom: 0;
     z-index: -1;
-    height: 100%;
+    height: auto;
     width: 100%;
     background-size: cover;
 }
+.text-box {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%; /* מאפשר לקופסה להתאים לגודל ה- flex_container */
+    max-width: 800px; /* Maximum width of the box */
+    margin: 0 auto; /* Centering the box */
+    text-align: center; /* ממרכז את הטקסט */
+
+}
+
+.text-box h2 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.text-box p {
+    font-size: 20px;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .text-box h2 {
+        font-size: 30px;
+    }
+    .text-box p {
+        font-size: 18px;
+    }
+    .flex-container {
+        padding-top: 50px;
+        width: 80%; /* מרחיב את הרוחב במסכים קטנים */
+    }
+}
+
+@media (max-width: 480px) {
+    .flex-container {
+        padding-top: 50px;
+        width: 95%; /* מרחיב עוד יותר במסכים קטנים מאוד */
+
+    }
+    .content {
+        top: 50px;
+    }
+    .text-box {
+        padding: 10px;
+        max-width: 90%;
+    }
+    .text-box h2 {
+        font-size: 24px;
+    }
+    .text-box p {
+        font-size: 16px;
+    }
+}
+
+
  /*------------------start of code of the home page---------------*/
 /* #hero-banner {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('path_to_your_hero_image.jpg') no-repeat center center/cover;
@@ -116,32 +189,7 @@ body, html {
     margin-left: 50%;
 }
 
- .hero-image {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    margin-right: 5px;
-    /* height: 100%; */
-    background-color: rgba(51, 40, 40, 0.75);
-    filter: brightness(90%);
-    background-position: center;
-    z-index: 10; 
- } */ */
- /*------------------end of code of the home page---------------*/
- 
- /*--------------check-----------------*/
- @media screen and (max-width: 768px) 
-{
-    nav li {
-        display: block;
-    }
-    .banner-text {
-        font-size: 1.5rem;
-    }
-}
+
 
  /*----------contact us page---------------*/
  button:hover {
@@ -174,3 +222,25 @@ body, html {
 .dropdown:hover .dropdown-content {
     display: block;
 } */
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .welcome-message h2 {
+        font-size: 30px;
+    }
+    .welcome-message p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    .welcome-message h2 {
+        font-size: 24px;
+    }
+    .welcome-message p {
+        font-size: 16px;
+    }
+}
