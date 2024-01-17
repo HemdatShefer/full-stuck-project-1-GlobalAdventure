@@ -1,100 +1,114 @@
+/* Document Direction */
+/* Sets the overall direction of the document, useful for languages that are read from left to right. */
 html {
     direction: ltr;
 }
 
-.dropdownmenu{
+/* Navbar Styling */
+/* Defines the layout and appearance of the navigation bar. */
+.dropdownmenu {
     display: flex;
-}
-.dropdownmenu ul, .dropdownmenu li{
-    margin: 0;
-    padding:0;
-}
-.dropdownmenu ul{
     list-style: none;
     background-color: #272424; /* Matching colleague's nav bar color */
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.dropdownmenu li{
+.dropdownmenu li {
     position: relative;
     width: auto;
     display: inline-block;
 }
-.dropdownmenu a{
+
+.dropdownmenu a {
     background-color: #272424;
     color: white;
     display: block;
     font-weight: bold;
-    font-size:13px;
+    font-size: 13px;
     font-family: 'Roboto', sans-serif;
     padding: 15px 55px;
     text-align: center;
     text-decoration: none;
     transition: all 0.25s ease;
+}
 
-}
-.dropdownmenu li:hover a{
+.dropdownmenu li:hover a {
     background: #f4f4f4;
-    color: #272424;  
+    color: #272424;
 }
-.submenu{
+
+/* Dropdown Submenu Styling */
+/* Styles for the dropdown submenu, including positioning and visibility. */
+.submenu {
     left: 0;
     opacity: 0;
     position: absolute;
-    top:35px;
+    top: 35px;
     visibility: hidden;
     z-index: 1;
+}
 
-}
-li:hover ul#submenu{
+li:hover ul#submenu {
     opacity: 1;
-    top:50px;
+    top: 50px;
     visibility: visible;
-    
 }
-#submenu li{
+
+#submenu li {
     float: none;
     width: 100%;
 }
-#submenu a:hover{
-    background: #f4f4f4;
-    color: #272424; 
 
-}
-#submenu a{
+#submenu a {
     background-color: #272424;
     color: antiquewhite;
 }
 
-/*--------------------------------------*/
+#submenu a:hover {
+    background: #f4f4f4;
+    color: #272424;
+}
 
+/* General Body Styling */
+/* Sets the font family, line height, and color for the body content. */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
 }
-.header-inner
-{
+
+/* Header Inner Styling */
+/* Styles for the inner part of the header, including alignment and spacing. */
+.header-inner {
     left: 10px;
     margin: 10px;
     border: 10px;
     padding: 10px;
 }
 
+/* Typography Styling */
+/* Specific styles for typography elements like headers. */
 h2 {
     font-style: italic;
 }
-.grid-item{
+
+/* Grid Item Styling */
+/* Styles for individual grid items. */
+.grid-item {
     display: block;
 }
 
+/* Responsive Design Adjustments */
+/* Styles for smaller screens, adjusting font sizes and layout. */
 @media screen and (max-width: 600px) {
     .header-inner h1 {
-        font-size: smaller; /* Smaller font size for the header on small screens */
+        font-size: smaller; /* Smaller font size for small screens */
     }
 
     .dropdownmenu ul {
-        display: block; /* Stack menu items vertically on small screens */
+        display: block; /* Vertical stacking of menu items on small screens */
     }
 
     .dropdownmenu ul li {
@@ -102,9 +116,12 @@ h2 {
     }
 
     .social-links a {
-        display: block; /* Stack social links vertically */
+        display: block; /* Vertical stacking of social links */
     }
 }
+
+/* Additional Dropdown Menu Styling */
+/* Additional styles for the dropdown menu, including list and item styling. */
 .dropdownmenu ul {
     list-style: none;
     padding: 0;
@@ -112,23 +129,15 @@ h2 {
 }
 
 .dropdownmenu li {
-    position: relative; /* חשוב לתפריטים הנפתחים */
+    position: relative; /* Important for dropdown menus */
 }
 
-.submenu {
-    display: none; /* מוסתר כברירת מחדל */
-    position: absolute;
-    background-color: #fff; /* או צבע אחר לפי בחירתך */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    min-width: 150px; /* או רוחב אחר לפי בחירתך */
-    z-index: 1000; /* כדי שיהיה מעל שאר האלמנטים */
-}
-
-/* מוצג כאשר מעבירים את העכבר מעל הפריט */
+/* Visible Dropdown Submenu on Hover */
+/* Styles to display the submenu when hovering over a menu item. */
 .dropdown:hover .submenu {
     display: block;
 }
 
 .submenu li {
-    padding: 8px; /* להתאים לפי צרכיך */
+    padding: 8px; /* Adjustable padding for submenu items */
 }
