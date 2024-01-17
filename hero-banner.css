@@ -9,13 +9,11 @@ body {
     padding: 0;
 }
 
-
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
 
 .content{
     position: absolute;
@@ -178,15 +176,7 @@ body {
     font-size: 30px;
     margin-left: 50%;
 } 
-.back_video{
-    float: right;
-    width: 900px;
-    height:100%;
-    filter: brightness(90%);
-    position: relative;
-    background-position: center;
-    z-index: 1;
-    margin-left: 50%;
+
 }
 
 
@@ -223,24 +213,3 @@ body {
     display: block;
 } */
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .welcome-message h2 {
-        font-size: 30px;
-    }
-    .welcome-message p {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 480px) {
-    .flex-container {
-        flex-direction: column;
-    }
-    .welcome-message h2 {
-        font-size: 24px;
-    }
-    .welcome-message p {
-        font-size: 16px;
-    }
-}
