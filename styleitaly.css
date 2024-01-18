@@ -1,129 +1,110 @@
-
-*{
+/* Global Reset */
+/* Resets default padding, margin, and sets box-sizing for all elements. */
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-.icon{
-    font-size:  0.9em;
+
+/* Icon Styling */
+/* Styles for icons including size and background. */
+.icon {
+    font-size: 0.9em;
     width: 100px;
     height: 100px;
     background-size: 100% 100%;
 }
 
-
-.photo{
+/* Photo Styling */
+/* Styles for photos including brightness filter, width, and height. */
+.photo {
     filter: brightness(70%);
     width: 100%;
     height: 500px;
     align-self: center;
-    /* display: block; */
-
 }
-body,html{
+
+/* Body and HTML Styling */
+/* Sets padding, margin, height, background color, and font for the body and html. */
+body, html {
     padding: 0;
     margin: 0;
     height: 100%;
     background-color: floralwhite;
-    font-family: 'Karla',sans-serif;
+    font-family: 'Karla', sans-serif;
 }
-.flex_container{
+
+/* Flex Container Styling */
+/* Sets display mode to flex for container elements. */
+.flex_container {
     display: flex;
 }
-.left_side{
-    width: 20%;
-    margin-left: 5px;
-    font-size: large;
-}
-.content{
-    width: 60%;
+
+/* Side and Content Area Styling */
+/* Styles for left, right, and main content areas including width, margin, and font size. */
+.left_side, .content, .right_side {
     margin-left: 5px;
     font-size: large;
     border-right: 1px solid #d0cccc;
 }
-.right_side{
+
+.left_side {
+    width: 20%;
+}
+
+.content {
+    width: 60%;
+}
+
+.right_side {
     width: 20%;
     margin-left: 10px;
     margin-top: 30px;
     justify-self: center;
-    font-size: large;
 }
-/* .frame{
-    justify-content: center;
-} */
-/* .pictures{
-    width: 40%;
-    height: 30%;   
-    align-self: center;
-    float: right;
-    float: top;
-    margin-right: 10px;
-    margin-left: 10px;
-    /* display: inline; */
- */
 
-.place{
+/* Place and Heading Styling */
+/* Styles for the 'place' class and headings including borders, positions, and text alignment. */
+.place {
     border-left: 1px solid #938c8c;
     position: relative;
     min-height: 300px;
 }
-h1{
+
+h1, h2 {
+    font-weight: lighter;
+    display: block;
+    position: relative;
+    text-align: left;
+}
+
+h1 {
     margin-top: 30px;
     font-size: 60px;
-    font-weight: lighter;
-    display: block;
-    position: relative; 
-    text-align: left; 
-    
 }
-h2{
 
-    font-weight: lighter;
-    display: block;
-    position: relative; 
+h2 {
     font-size: 40px;
     margin-top: 10px;
     margin-bottom: 10px;
     border-bottom: 1px solid #d0cccc;
 }
-p{
+
+/* Paragraph Styling */
+/* Styles for paragraphs including font size and display type. */
+p {
     display: block;
     font-size: large;
 }
-.locations{
-  display: flex;
-  justify-content: space-around;
-}
-video{
-   width: 60%;
-   float: right;
-   margin: 3px;
+
+/* Location and Video Styling */
+/* Styles for locations, video, and images including width, height, and filters. */
+.locations {
+    display: flex;
+    justify-content: space-around;
 }
 
-@media (orientation:portrait) {
-    .left_side{
-        display: none;
-    }
-    .content{
-        width: 90%;
-        margin-left: 5%;
-        font-size: large;
-        border-right: none;
-    }
-    .locations{
-        flex-wrap: wrap;
-    }
-    .right_side{
-        display: none;
-    }
-    iframe{
-        display: none;
-    }
-    video{
-        width: 100%;
-    }
-}
-.location{
+.location {
     width: 300px;
     height: 320px;
     margin: 10px;
@@ -131,14 +112,46 @@ video{
     margin: 15px;
     filter: brightness(85%);
 }
-.image{
+
+.video {
+    width: 60%;
+    float: right;
+    margin: 3px;
+}
+
+/* Responsive Design for Portrait Orientation */
+/* Adjusts layout for devices in portrait orientation. */
+@media (orientation:portrait) {
+    .left_side, .right_side, iframe {
+        display: none;
+    }
+
+    .content {
+        width: 90%;
+        margin-left: 5%;
+        border-right: none;
+    }
+
+    .locations {
+        flex-wrap: wrap;
+    }
+
+    video {
+        width: 100%;
+    }
+}
+
+/* Additional Styles for Locations and Slider */
+/* Styles for image and info sections in locations and styling for the slider. */
+.image {
     display: block;
-    width:100%;
+    width: 100%;
     height: 100%;
     border-radius: 2%;
-    object-fit:cover;
+    object-fit: cover;
 }
-.info{
+
+.info {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -150,47 +163,52 @@ video{
     transition: .5s ease;
     border-radius: 2%;
 }
-.location:hover .info{
+
+.location:hover .info {
     height: 100%;
 }
 
-li{
+li {
     margin-left: 5%;
 }
-h3{
+
+h3 {
     color: whitesmoke;
-    text-align: center; 
+    text-align: center;
 }
-.info_style{
+
+.info_style {
     color: whitesmoke;
     text-align: center;
     font-size: medium;
 }
-.slider-wrapper{
+
+.slider-wrapper {
     position: relative;
     max-width: 70rem;
-    margin: 10px 0 ;
-    
-
+    margin: 10px 0;
 }
-.slider{
+
+.slider {
     display: flex;
     aspect-ratio: 16/9;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     box-shadow: 0 1.5rem 3rem -0.75rem hlsa(0,0%,0%,0.25);
-    /* border-radius: 0.5rem; */
 }
-div::-webkit-scrollbar{
+
+div::-webkit-scrollbar {
     display: none;
 }
-.slider img{
+
+.slider img {
     flex: 1 0 100%;
     scroll-snap-align: start;
-    object-fit:cover;
+    object-fit: cover;
 }
-.slider-nav{
+
+.slider-nav {
     display: flex;
     column-gap: 0.7rem;
     position: absolute;
@@ -199,23 +217,21 @@ div::-webkit-scrollbar{
     transform: translateX(-50%);
     z-index: 1;
 }
-.slider-nav a{
+
+.slider-nav a {
     width: 2.5rem;
-    height:0.5rem;
-    /* border-radius: 50%; */
+    height: 0.5rem;
     background-color: #fff;
     opacity: 0.75;
     transition: opacity ease 250ms;
 }
-.slider-nav a:hover{
+
+.slider-nav a:hover {
     opacity: 1;
 }
 
-iframe{
-    position:static;
-    width:300px;
-    height:205px; 
+iframe {
+    position: static;
+    width: 300px;
+    height: 205px;
 }
-
-
-
