@@ -1,0 +1,107 @@
+/* General Body and HTML Styling */
+/* Sets global font family and background color for the entire document. */
+body, html {
+    font-family: 'Roboto', sans-serif;
+    background-color: floralwhite;
+}
+
+/* Grid Container Layout */
+/* Configures the grid layout, including columns, gaps, and alignment. */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Space between columns */
+    justify-content: center; /* Horizontally center items */
+    align-items: center; /* Vertically center items */
+}
+
+/* Text Content Styling */
+/* Styles for the text content including font size, color, and alignment. */
+.text-content {
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 40px;
+    color: #000000;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.text-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* Image Slider Styling */
+/* Styles for the image slider, including positioning and dimensions. */
+.image-slider {
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    margin: 20px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    animation: slideShow 24s infinite;
+}
+
+.slider-text h1 {
+    position: absolute;
+    bottom: 10px;
+    left: 8px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+/* Slideshow Animation */
+/* Keyframes for the slideshow animation, cycling through background images. */
+@keyframes slideShow {
+    0% { background-image: url('images/view-1.png'); }
+    33% { background-image: url('images/view-2.png'); }
+    66% { background-image: url('images/view-3.png'); }
+    100% { background-image: url('images/view-1.png'); }
+}
+
+/* Responsive Design for Tablets */
+/* Adjusts grid and text sizes for devices with max-width of 768px. */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .text-content h2 {
+        font-size: 20px;
+    }
+    .text-content p {
+        font-size: 10px;
+    }
+    .text-content h1 {
+        font-size: 15px;
+    }
+}
+
+/* Responsive Design for Mobile Phones */
+/* Adjusts grid and text sizes for devices with max-width of 480px. */
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .text-content h2 {
+        font-size: 15px;
+    }
+    .text-content p {
+        font-size: 10px;
+    }
+    .text-content h1 {
+        font-size: 12px;
+    }
+}

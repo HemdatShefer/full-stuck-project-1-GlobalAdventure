@@ -1,0 +1,114 @@
+.name{
+    font-family: 'Franklin Gothic Medium''Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+
+}
+body{
+   min-height: 100vh;
+}
+.header-inner {
+    text-align: center;
+}
+
+.logo-and-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.name {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+}
+/*--------navbar--------------*/
+.dropdownmenu{
+    display: flex;
+}
+.dropdownmenu ul, .dropdownmenu li{
+    margin: 0;
+    padding:0;
+}
+.dropdownmenu ul{
+    list-style: none;
+    background-color: #272424; /* Matching colleague's nav bar color */
+    width: 100%;
+
+}
+.dropdownmenu li{
+    float: left;
+    position: relative;
+    width: auto;
+}
+.dropdownmenu a{
+    background-color: #272424;
+    color: white;
+    display: block;
+    font-weight: bold;
+    font-size:13px;
+    font-family: 'Roboto', sans-serif;
+    padding: 15px 55px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    align-items: center; 
+    justify-content: space-around; 
+    align-items: start; 
+
+}
+.dropdownmenu li:hover a{
+    background: #f4f4f4;
+    color: #272424;  
+}
+@media screen and (max-width: 768px) {
+    .dropdownmenu a {
+        font-size: 11px; 
+        padding: 10px 15px; 
+    }
+}
+#submenu{
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top:35px;
+    z-index: 1;
+
+}
+li:hover ul#submenu{
+    opacity: 1;
+    top:50px;
+    visibility: visible;
+    
+}
+#submenu li{
+    float: none;
+    width: 100%;
+}
+#submenu a:hover{
+    background: #f4f4f4;
+    color: #272424; 
+
+}
+#submenu a{
+    background-color: #272424;
+    color: antiquewhite;
+}
+/*--------------------------------------*/
+
+/*-----------------footer--------------------*/
+footer {
+    background-color: #272424; /* Aligning with colleague's footer color */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: sticky;
+    top:100%;
+
+}
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+.footer-links a:hover {
+    color: #ff5733;
+}
